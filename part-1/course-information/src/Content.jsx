@@ -1,12 +1,16 @@
 import {Part} from "./Part.jsx";
 
-function Content(props) {
+function Content({parts}) {
+  const part1 = parts[0];
+  const part2 = parts[1];
+  const part3 = parts[2];
+
   return (
     <>
-      <Part part={props.part1} exercises={props.exercises1} />
-        <Part part={props.part2} exercises={props.exercises2} />
-          <Part part={props.part3} exercises={props.exercises3} />
-         </>
+      <Part part={part1.name} exercises={part1.exercises} />
+      <Part part={part2.name} exercises={part2.exercises} />
+      <Part part={part3.name} exercises={part3.exercises} />
+    </>
   )
 }
 
